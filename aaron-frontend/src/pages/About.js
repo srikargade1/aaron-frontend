@@ -11,6 +11,6 @@ export default function About()
 function Random()
 {
     return(
-    <h1>Random Heading.</h1>
+    <h1>Kundelu Pilla</h1>
     )
 }

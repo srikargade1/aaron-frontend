@@ -24,6 +24,14 @@
   color: white;
 }
 
+ul {
+  list-style: none;       /* remove default bullets */
+  padding: 0;
+  margin: 0;
+  display: flex;          /* lay out items in a row */
+  gap: 16px;  
+}
+
 .App-link {
   color: #61dafb;
 }
