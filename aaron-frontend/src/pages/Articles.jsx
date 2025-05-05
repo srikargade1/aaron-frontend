@@ -1,8 +1,8 @@
-export default function About()
+export default function Articles()
 {
     return (
         <>
-        <p>About Page</p>
+        <p>Articles Page</p>
         <Random />
         </>
     );
@@ -11,6 +11,6 @@ export default function About()
 function Random()
 {
     return(
-    <h1>Kundelu Pilla</h1>
+    <h1>Random</h1>
     )
 }

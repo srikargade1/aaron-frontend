@@ -36,6 +36,36 @@ ul {
   color: #61dafb;
 }
 
+.nav-link {
+  color: #61dafb;
+}
+
+.nav-link.active {
+  color: #7d3c98;
+}
+
+nav{
+  align-content: center;
+  background-color: #e5e7e9;
+  padding: 10px;
+  border-radius: 30px;
+  margin: 0 auto;
+  width:50%;
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content:space-around;  /* or "center" */
+}
+
+nav a {
+  text-decoration: none;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
