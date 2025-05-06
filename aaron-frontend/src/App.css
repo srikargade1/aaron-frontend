@@ -1,3 +1,4 @@
+/* === Global App Styles === */
 .App {
   text-align: center;
 }
@@ -13,6 +14,12 @@
   }
 }
 
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* === Header === */
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -24,33 +31,13 @@
   color: white;
 }
 
-ul {
-  list-style: none;       /* remove default bullets */
-  padding: 0;
-  margin: 0;
-  display: flex;          /* lay out items in a row */
-  gap: 16px;  
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-.nav-link {
-  color: #61dafb;
-}
-
-.nav-link.active {
-  color: #7d3c98;
-}
-
-nav{
-  align-content: center;
+/* === Navigation Bar === */
+nav {
   background-color: #e5e7e9;
   padding: 10px;
   border-radius: 30px;
   margin: 0 auto;
-  width:50%;
+  width: 20%;
   text-decoration: none;
 }
 
@@ -59,18 +46,117 @@ nav ul {
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content:space-around;  /* or "center" */
+  justify-content: space-between;
 }
 
 nav a {
   text-decoration: none;
+  color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-link.active {
+  color: #7d3c98;
+}
+
+/* === Article Grid & Scroll Layout === */
+.article-grid {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 24px;
+  padding-right: 20px;
+}
+
+.article-grid::-webkit-scrollbar {
+  display: none; /* optional: hides scrollbar */
+}
+
+.article-box {
+  flex: 0 0 320px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  max-width: 350px;
+}
+
+.article-box:hover {
+  transform: translateY(-4px);
+}
+
+.article-box img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.article-box h2 {
+  margin: 12px;
+  font-size: 1rem;
+  color: #555;
+  font-weight: 600;
+}
+
+.article-box p {
+  margin: 0 12px 12px 12px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #222;
+}
+
+/* === Section Layout === */
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  color: #222;
+  text-align: left;
+}
+
+.home-page {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.main-title {
+  display: flex;
+  justify-content: center;
+}
+
+/* === Buttons === */
+.home-button {
+  background-color: #61dafb;
+  padding: 20px;
+  margin: 24px;
+  border-radius: 25px;
+  border-style: none;
+  width: 200px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1;
+}
+
+.scroll-button.left {
+  margin-right: 10px;
+}
+
+.scroll-button.right {
+  margin-left: 10px;
 }

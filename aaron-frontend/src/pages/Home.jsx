@@ -1,15 +1,18 @@
 import ArticleView from "../components/ArticleView";
 
 export default function Home()
-{
+{    
+
     return (
         <>
-        <p>Home Page</p>
-        <button>Vocab Quiz</button>
+        <h1 className = "main-title">Home Page</h1>
         <br></br>
-        <button>Custom Article</button>
         <ArticleView name = "Explore Topics" />
         <ArticleView name = "Articles History" />
+        <div className="button-container">
+        <button className = "home-button">Custom Article</button>
+        <button className = "home-button">Vocab Quiz</button>
+        </div>
         </>
     );
 }
